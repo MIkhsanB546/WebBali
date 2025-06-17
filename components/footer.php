@@ -1,4 +1,4 @@
-<footer class="flex justify-center items-center h-22 bg-gray-50">
+<footer class="mt-auto flex justify-center items-center h-22 bg-gray-50">
   <p class="text-gray-500">Copyright 2025</p>
 </footer>
 
