@@ -7,6 +7,11 @@
   new Rellax('.rellax');
   AOS.init();
 </script>
+<script>
+  const quill = new Quill('#editor', {
+    theme: 'snow'
+  });
+</script>
 </body>
 
 </html>
