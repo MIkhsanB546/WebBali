@@ -1,11 +1,16 @@
 <?php include_once 'components/header.php' ?>
 
 
-<section class="my-24">
-  <div class="px-24">
+<section class="mt-24">
+  <div class="max-w-3/4 mx-auto">
     <h2 class="mb-6 font-bold text-2xl text-green-500">CONTACT</h2>
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
       <form method="post" class="p-4 bg-gray-100 rounded-lg">
+        <div class="mb-4">
+          <label for="name" class="">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name"
+            class="block p-1 w-full border-2 border-gray-400 rounded focus:border-green-500">
+        </div>
         <div class="mb-4">
           <label for="email" class="">Your Email</label>
           <input type="text" id="email" name="email" placeholder="example@mail.com"
