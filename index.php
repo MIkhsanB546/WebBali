@@ -28,30 +28,41 @@
     </h2>
     <div class="flex flex-col justify-around gap-6 lg:flex-row">
       <!-- cards -->
-      <div class="max-w-xs bg-white rounded-lg shadow-md overflow-hidden">
-        <img src="./assets/img/pic1.png" alt="GWK Cultural Park" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="text-lg font-semibold mb-2">GWK Cultural Park</h3>
-          <p class="text-gray-600 mb-4">Witness with your very own eyes the beautiful dances like the haunting Kecak.</p>
+      <?php
+      $destinations = array(
+        array(
+          "img" => "./assets/img/gwk_cultural_park.png",
+          "alt" => "GWK Cultural Park",
+          "title" => "GWK Cultural Park",
+          "description" => "Witness with your very own eyes the beautiful dances like the haunting Kecak.",
+        ),
+        array(
+          "img" => "./assets/img/ulun_danu_bratan_temple.png",
+          "alt" => "Ulun Danu Bratan Temple",
+          "title" => "Ulun Danu Bratan Temple",
+          "description" => "the Ulun Danu Bratan Temple is a popular attraction among both tourists and locals.",
+        ),
+        array(
+          "img" => "./assets/img/tanah_lot.png",
+          "alt" => "Tanah Lot",
+          "title" => "Tanah Lot",
+          "description" => "Tanah Lot is an exotic ancient Hindu shrine perched on top of an outcrop amidst constantly crashing waves.",
+        ),
+      );
+
+      foreach ($destinations as $d):
+      ?>
+        <div class="max-w-xs bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="<?= $d['img'] ?>" alt="<?= $d['alt'] ?>" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold mb-2"><?= $d['title'] ?></h3>
+            <p class="text-gray-600 mb-4"><?= $d['description'] ?></p>
+          </div>
         </div>
-      </div>
-      <div class="max-w-xs bg-white rounded-lg shadow-md overflow-hidden">
-        <img src="./assets/img/pic2.png" alt="Ulun Danu Bratan Temple" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="text-lg font-semibold mb-2">Ulun Danu Bratan Temple</h3>
-          <p class="text-gray-600 mb-4">the Ulun Danu Bratan Temple is a popular attraction among both tourists and locals.</p>
-        </div>
-      </div>
-      <div class="max-w-xs bg-white rounded-lg shadow-md overflow-hidden">
-        <img src="./assets/img/pic3.png" alt="Tanah Lot" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="text-lg font-semibold mb-2">Tanah Lot</h3>
-          <p class="text-gray-600 mb-4">Tanah Lot is an exotic ancient Hindu shrine perched on top of an outcrop amidst constantly crashing waves.</p>
-        </div>
-      </div>
+      <?php endforeach ?>
     </div>
     <div class="text-center mt-12">
-      <a href="#" class="py-2 px-4 bg-green-500 text-white font-semibold rounded transition hover:bg-green-600">Learn More</a>
+      <a href="destinations.php" class="py-2 px-4 bg-green-500 text-white font-semibold rounded transition hover:bg-green-600">Learn More</a>
     </div>
   </div>
 </section>
