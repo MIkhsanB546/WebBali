@@ -1,4 +1,7 @@
-<?php include_once 'components/header.php' ?>
+<?php
+include('destination_data.php');
+include_once 'components/header.php'
+?>
 
 <header class="h-96 bg-[url(./assets/img/hero.jpg)] bg-cover bg-center bg-fixed" id="hero">
   <div class="flex justify-center items-center h-full bg-black/50">
@@ -15,39 +18,27 @@
       <h2 class="text-3xl font-bold text-green-600 mb-8">
         Popular Destinations
       </h2>
-      <div class="flex flex-col justify-around gap-6 lg:flex-row">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         <!-- cards -->
         <?php
-        $destinations = array(
-          array(
-            "img" => "./assets/img/gwk_cultural_park.png",
-            "alt" => "GWK Cultural Park",
-            "title" => "GWK Cultural Park",
-            "description" => "Witness with your very own eyes the beautiful dances like the haunting Kecak.",
-          ),
-          array(
-            "img" => "./assets/img/ulun_danu_bratan_temple.png",
-            "alt" => "Ulun Danu Bratan Temple",
-            "title" => "Ulun Danu Bratan Temple",
-            "description" => "the Ulun Danu Bratan Temple is a popular attraction among both tourists and locals.",
-          ),
-          array(
-            "img" => "./assets/img/tanah_lot.png",
-            "alt" => "Tanah Lot",
-            "title" => "Tanah Lot",
-            "description" => "Tanah Lot is an exotic ancient Hindu shrine perched on top of an outcrop amidst constantly crashing waves.",
-          ),
-        );
 
-        foreach ($destinations as $d):
+        function truncateString($text, $maxLength = 100, $suffix = "...")
+        {
+          if (strlen($text) > $maxLength) {
+            return substr($text, 0, $maxLength) . $suffix;
+          }
+          return $text;
+        }
+
+        foreach ($destinations as $key => $d):
         ?>
-          <div class="max-w-xs bg-white rounded-lg shadow-md overflow-hidden">
-            <img src="<?= $d['img'] ?>" alt="<?= $d['alt'] ?>" class="w-full h-48 object-cover">
+          <a href="comment.php?id=<?= $key ?>" class="max-w-xs bg-white rounded-lg shadow-lg overflow-hidden mx-auto transition cursor-pointer hover:scale-105">
+            <img src="<?= $d['img'] ?>" alt="<?= $d['alt'] ?>" class="w-full h-48 object-cover p-1 rounded-lg">
             <div class="p-4">
               <h3 class="text-lg font-semibold mb-2"><?= $d['title'] ?></h3>
-              <p class="text-gray-600 mb-4"><?= $d['description'] ?></p>
+              <p class="text-gray-600 mb-4"><?= truncateString($d['description']) ?></p>
             </div>
-          </div>
+          </a>
         <?php endforeach ?>
       </div>
       <div class="text-center mt-12">
