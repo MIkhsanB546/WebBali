@@ -1,11 +1,14 @@
-<?php include_once 'components/header.php' ?>
+<?php
+include_once 'components/header.php';
+include('destination_data.php');
+?>
 
 <header class="h-screen bg-[url(./assets/img/hero.jpg)] bg-cover bg-center bg-fixed" id="hero">
   <div class="flex justify-center items-center h-full bg-black/50">
     <div class="text-center text-white rellax">
       <h1 class="mb-4 text-6xl font-bold">Discovery Beautiful Bali Island</h1>
       <p class="mb-8 text-lg">One of the best tourist destination in Indonesia</p>
-      <a href="#" class="py-2 px-4 transition bg-green-500 text-white rounded hover:bg-green-600">Explore Destinations</a>
+      <a href="destinations.php" class="py-2 px-4 transition bg-green-500 text-white rounded hover:bg-green-600">Explore Destinations</a>
     </div>
   </div>
 </header>
@@ -21,7 +24,7 @@
   </div>
 </section>
 
-<section class="flex items-center py-8 lg:h-screen lg:py-0">
+<section class="flex items-center py-8">
   <div class="w-5/6 mx-auto text-justify lg:w-3/4">
     <h2 class="text-5xl font-bold text-green-600 mb-8">
       Top Destinations
@@ -29,28 +32,18 @@
     <div class="flex flex-wrap justify-between gap-y-6">
       <!-- cards -->
       <?php
-      $destinations = array(
-        array(
-          "img" => "./assets/img/gwk_cultural_park.png",
-          "title" => "GWK Cultural Park",
-        ),
-        array(
-          "img" => "./assets/img/ulun_danu_bratan_temple.png",
-          "title" => "Ulun Danu Bratan Temple",
-        ),
-        array(
-          "img" => "./assets/img/tanah_lot.png",
-          "title" => "Tanah Lot",
-        ),
-      );
-
+      $i = 0;
       foreach ($destinations as $d):
       ?>
-        <div class="relative max-w-xs w-full group">
+        <div class="relative  w-full group">
           <div class="bg-[url(<?= $d['img'] ?>)] bg-cover bg-center h-64 w-full transition duration-300 ease-in-out group-hover:brightness-50"></div>
           <p class="absolute inset-0 flex items-center justify-center text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"><?= $d['title'] ?></p>
         </div>
-      <?php endforeach ?>
+
+      <?php
+        if (++$i > 2) break;
+      endforeach
+      ?>
     </div>
 
     <div class="text-center mt-12">
