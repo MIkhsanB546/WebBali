@@ -33,28 +33,28 @@
             'img' => './assets/img/nasi campur.jpg',
             'alt' => 'Nasi campur',
             'title' => 'Nasi Campur',
-            'description' => 'Nasi Campur Bali merupakan campuran nasi dengan berbagai macam lauk pauk seperti ayam, telur sayuran dan juga sate lilit yang biasanya terbuat dari ikan atau ayam.',
+            'description' => 'Balinese Mixed Rice is a mixture of rice with various side dishes such as chicken, eggs, vegetables and also sate lilit which is usually made from fish or chicken.',
             'price' => 'Rp 25.000'
           ],
           [
             'img' => './assets/img/Ayam betutu.jpg',
             'alt' => 'Ayam Betutu',
             'title' => 'Ayam Betutu',
-            'description' => 'Ayam Betutu adalah makanan tradisional khas Bali yang terbuat dari ayam atau bebek utuh yang berisi bumbu, kemudian dipanggang dalam api sekam',
+            'description' => 'Ayam Betutu is a traditional Balinese food made from whole chicken or duck filled with spices, then roasted in rice husk fire.',
             'price' => 'Rp 50.000'
           ],
           [
             'img' => './assets/img/Sate_lilit.jpg',
             'alt' => 'Sate Lilit',
             'title' => 'Sate Lilit',
-            'description' => 'Sate lilit adalah hidangan sate khas Bali yang berbeda dari sate pada umumnya. Daging yang telah dicincang dan dicampur dengan bumbu serta kelapa parut, kemudian dililitkan pada batang serai atau bambu pipih, lalu dibakar hingga matang.',
+            'description' => 'Sate lilit is a Balinese satay dish that is different from satay in general. Minced meat mixed with spices and grated coconut, then wrapped around lemongrass stalks or flat bamboo, then grilled until cooked.',
             'price' => 'Rp 50.000'
           ],
           [
             'img' => './assets/img/es kuwut.png',
             'alt' => 'es kuwut',
             'title' => 'Es Kuwut',
-            'description' => 'Es kuwut merupakan sejenis minuman koktail dingin khas Bali yang terbuat dari air kelapa yang dicampur dengan serutan kelapa, serutan melon atau timun, biji selasih, perasan jeruk nipis, sirup melon, es batu dan terkadang ditambahkan susu, santan, atau nata de coco.',
+            'description' => 'Es kuwut is a type of cold Balinese cocktail drink made from coconut water mixed with grated coconut, grated melon or cucumber, basil seeds, lime juice, melon syrup, ice cubes and sometimes added with milk, coconut milk or nata de coco.',
             'price' => 'Rp 10.000'
           ],
 
@@ -62,7 +62,7 @@
             'img' => './assets/img/es daluman.jpg',
             'alt' => 'es daluman',
             'title' => 'Es Daluman',
-            'description' => 'Es daluman adalah minuman menyegarkan yang dapat digunakan sebagai takjil. Daluman atau cincau berasal dari olahan daun cincau (Cyclea sp) dengan tekstur kenyal tetapi mudah terurai dan mencair.',
+            'description' => 'Es daluman is a refreshing drink that can be used as takjil. Daluman or cincau comes from processed cincau leaves (Cyclea sp) with a chewy texture but easy to break down and melt.',
             'price' => 'Rp 10.000'
           ],
         ];
