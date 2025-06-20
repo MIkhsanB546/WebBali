@@ -36,7 +36,7 @@ include('destination_data.php');
       $i = 0;
       foreach ($destinations as $d):
       ?>
-        <div class="relative  w-full group">
+        <div class="relative  w-full group" onclick="mobileIndexHover(this)">
           <div class="bg-[url(<?= $d['img'] ?>)] bg-cover bg-center h-64 w-full transition duration-300 ease-in-out group-hover:brightness-50"></div>
           <p class="absolute inset-0 flex items-center justify-center text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"><?= $d['title'] ?></p>
         </div>

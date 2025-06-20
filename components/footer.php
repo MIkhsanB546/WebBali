@@ -11,6 +11,7 @@
   const burgerIcon = document.getElementById('burger');
   const navMenu = document.getElementById('nav-menu');
 
+  // header.php
   burgerIcon.addEventListener('click', () => {
     if (burgerIcon.classList.contains('fa-bars')) {
       burgerIcon.classList.remove('fa-bars');
@@ -22,6 +23,15 @@
       navMenu.classList.add('hidden')
     }
   });
+
+  // index.php
+  function mobileIndexHover(el) {
+    const bg = el.querySelector('div');
+    const text = el.querySelector('p');
+
+    bg.classList.toggle('brightness-50');
+    text.classList.toggle('opacity-100');
+  }
 </script>
 </body>
 
