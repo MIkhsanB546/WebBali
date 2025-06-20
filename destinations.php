@@ -33,13 +33,14 @@ include_once 'components/header.php'
 
         foreach ($destinations as $key => $d):
         ?>
-          <a href="destination_detail.php?id=<?= $key ?>" class="max-w-xs bg-white rounded-lg shadow-lg overflow-hidden mx-auto transition cursor-pointer hover:scale-105">
+          <div class="max-w-xs bg-white rounded-lg shadow-lg overflow-hidden mx-auto transition cursor-pointer">
             <img src="<?= $d['img'] ?>" alt="<?= $d['alt'] ?>" class="w-full h-48 object-cover p-1 rounded-lg">
             <div class="p-4">
               <h3 class="text-lg font-semibold mb-2"><?= $d['title'] ?></h3>
               <p class="text-gray-600 mb-4"><?= truncateString($d['description']) ?></p>
+              <a href="destination_detail.php?id=<?= $key ?>" class="py-2 px-4 bg-green-500 text-white font-semibold rounded transition cursor-pointer hover:bg-green-600 text-center">See Details</a>
             </div>
-          </a>
+          </div>
         <?php endforeach ?>
       </div>
       <div class="text-center mt-12">
