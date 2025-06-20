@@ -1,30 +1,42 @@
 <?php
+session_start();
 include('destination_data.php');
 include_once 'components/header.php';
 
+// Page selector
 $id = $_GET['id'];
-
 if ($id < 0 || $id >= count($destinations)) {
   echo "<p>Invalid destination selected.</p>";
 } else {
   $destination = $destinations[$id];
 }
 
-// ! fix this: make it add more comments
-if (!empty($_POST['name']) && !empty($_POST['comment'])) {
-  $destinations[$id]['comment'][] = array(
-    'name' => $_POST['name'],
-    'comment' => $_POST['comment']
-  );
-  $destination = $destinations[$id];
+
+// add comments
+if (!isset($_SESSION['comments'])) {
+  $_SESSION['comments'] = array();
 }
+if (!isset($_SESSION['comments'][$id])) {
+  $_SESSION['comments'][$id] = array(); // Initialize
+}
+if (!empty($_POST['name']) && !empty($_POST['comment'])) {
+  $newComment = array(
+    'name' => $_POST['name'],
+    'text' => $_POST['comment']
+  );
+  $_SESSION['comments'][$id][] = $newComment;
+  $destination['comment'] = $_SESSION['comments'][$id];
+}
+
+
+
 ?>
 <section class="py-16 mt-8 max-w-3/4 mx-auto">
   <h2 class="text-3xl font-bold text-green-600 mb-8"><?= $destination['title'] ?></h2>
   <img src="<?= $destination['img'] ?>" alt="<?= $destination['title'] ?>" class="w-full max-w-xl mx-auto rounded-lg mb-6">
   <p class="text-gray-700 mb-8"><?= $destination['description'] ?></p>
   <!-- Comments section could be added here -->
-  <h3 class="text-2xl font-bold ">Comment</h3>
+  <h3 class="text-2xl font-bold mb-2">Comment</h3>
   <form action="" method="post">
     <div class="mb-4">
       <label for="name" class="">Name</label>
@@ -43,7 +55,7 @@ if (!empty($_POST['name']) && !empty($_POST['comment'])) {
     <?php foreach ($destination['comment'] as $c): ?>
       <div class="py-2 border-b border-gray-700">
         <p class="font-semibold text-gray-700"><?= $c['name'] ?></p>
-        <p class="text-gray-700"><?= $c['comment'] ?></p>
+        <p class="text-gray-700"><?= $c['text'] ?></p>
       </div>
     <?php endforeach ?>
   </div>
