@@ -16,7 +16,7 @@ include('destination_data.php');
 
 <section class="flex items-center py-8 lg:h-screen lg:py-0">
   <div class="w-5/6 mx-auto text-justify lg:w-3/4">
-    <h2 class="text-5xl font-bold text-green-600 mb-8">
+    <h2 class="text-4xl font-bold text-green-600 mb-8">
       About
     </h2>
     <p class="mb-6 text-base/8">Bali is the Island of God in Paradise among Indonesian tourism. Furthermore, it is a perfect tourist destination to enjoy the holiday with your family as well as collages. This tropical paradise has a unique blend of modern tourist facilities combined with wonderful shopping, a rich past as well as heritage sites.</p>
@@ -27,7 +27,7 @@ include('destination_data.php');
 
 <section class="flex items-center py-8">
   <div class="w-5/6 mx-auto text-justify lg:w-3/4">
-    <h2 class="text-5xl font-bold text-green-600 mb-8">
+    <h2 class="text-4xl font-bold text-green-600 mb-8">
       Top Destinations
     </h2>
     <div class="flex flex-wrap justify-between gap-y-6">
