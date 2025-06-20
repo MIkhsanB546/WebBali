@@ -1,4 +1,5 @@
 <?php
+$pageTitle = "Destinations";
 include('destination_data.php');
 include_once 'components/header.php'
 ?>
@@ -32,7 +33,7 @@ include_once 'components/header.php'
 
         foreach ($destinations as $key => $d):
         ?>
-          <a href="comment.php?id=<?= $key ?>" class="max-w-xs bg-white rounded-lg shadow-lg overflow-hidden mx-auto transition cursor-pointer hover:scale-105">
+          <a href="destination_detail.php?id=<?= $key ?>" class="max-w-xs bg-white rounded-lg shadow-lg overflow-hidden mx-auto transition cursor-pointer hover:scale-105">
             <img src="<?= $d['img'] ?>" alt="<?= $d['alt'] ?>" class="w-full h-48 object-cover p-1 rounded-lg">
             <div class="p-4">
               <h3 class="text-lg font-semibold mb-2"><?= $d['title'] ?></h3>

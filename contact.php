@@ -1,4 +1,7 @@
-<?php include_once 'components/header.php' ?>
+<?php
+$pageTitle = "Contact";
+include_once 'components/header.php'
+?>
 
 
 <section class="mt-24">

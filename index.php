@@ -1,4 +1,5 @@
 <?php
+$pageTitle = "Home";
 include_once 'components/header.php';
 include('destination_data.php');
 ?>
