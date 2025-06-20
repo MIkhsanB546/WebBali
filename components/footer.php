@@ -8,8 +8,19 @@
   AOS.init();
 </script>
 <script>
-  const quill = new Quill('#editor', {
-    theme: 'snow'
+  const burgerIcon = document.getElementById('burger');
+  const navMenu = document.getElementById('nav-menu');
+
+  burgerIcon.addEventListener('click', () => {
+    if (burgerIcon.classList.contains('fa-bars')) {
+      burgerIcon.classList.remove('fa-bars');
+      burgerIcon.classList.add('fa-x');
+      navMenu.classList.remove('hidden');
+    } else {
+      burgerIcon.classList.remove('fa-x');
+      burgerIcon.classList.add('fa-bars');
+      navMenu.classList.add('hidden')
+    }
   });
 </script>
 </body>
